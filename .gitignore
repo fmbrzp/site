@@ -5,6 +5,9 @@ vendor/
 # Env files
 .env
 
+# Local config / secrets
+wp-config.php
+
 # OS files
 .DS_Store
 
@@ -17,6 +20,8 @@ cache/
 .tmp/
 tmp/
 
-# WordPress cache (common)
+# WordPress generated content
+wp-content/uploads/
 wp-content/cache/
-wp-content/uploads/cache/
+wp-content/upgrade/
+wp-content/languages/

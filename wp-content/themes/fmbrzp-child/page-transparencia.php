@@ -24,14 +24,19 @@ $cards = [
         'url' => home_url('/transparencia/regulamentos/'),
     ],
     [
-        'title' => 'Resultados',
-        'description' => 'Resultados oficiais de competições e eventos.',
+        'title' => 'Resultados e Convocações',
+        'description' => 'Resultados oficiais de competições, eventos e convocações.',
         'url' => home_url('/transparencia/resultados/'),
     ],
     [
-        'title' => 'Convocações',
-        'description' => 'Convocações de atletas, dirigentes e demais comunicados.',
-        'url' => home_url('/transparencia/convocacoes/'),
+        'title' => 'Atas e Estatuto',
+        'description' => 'Atas de reuniões e estatuto da federação.',
+        'url' => home_url('/transparencia/atas-e-estatuto/'),
+    ],
+    [
+        'title' => 'Prestação de Contas Anual',
+        'description' => 'Relatórios e demonstrações anuais de prestação de contas.',
+        'url' => home_url('/transparencia/prestacao-de-contas-anual/'),
     ],
 ];
 ?>

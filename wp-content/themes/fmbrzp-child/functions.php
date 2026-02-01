@@ -188,3 +188,204 @@ function fmbrzp_handle_contato_form() {
     wp_safe_redirect(add_query_arg($query, '1', home_url('/contato/')));
     exit;
 }
+
+add_shortcode('documento_meta', function() {
+    $post_id = get_the_ID();
+    if (!$post_id) {
+        return '';
+    }
+
+    $numero = get_field('numero_referencia', $post_id);
+    $data_raw = get_field('data_do_documento', $post_id);
+    $ementa = get_field('ementa', $post_id);
+    $arquivo = get_field('arquivo_documento', $post_id);
+    $observacoes = get_field('anexos', $post_id);
+    if ($observacoes === '' || $observacoes === null) {
+        $observacoes = get_field('observacoes', $post_id);
+    }
+
+    $pdf_url = '';
+    if (is_array($arquivo) && isset($arquivo['url'])) {
+        $pdf_url = $arquivo['url'];
+    } elseif (is_string($arquivo)) {
+        $pdf_url = $arquivo;
+    }
+
+    $data_formatada = '';
+    if (is_string($data_raw) && $data_raw !== '') {
+        $ts = strtotime($data_raw);
+        if ($ts) {
+            $data_formatada = date_i18n('d/m/Y', $ts);
+        }
+    }
+
+    if ($numero === '' && $data_formatada === '' && $ementa === '' && $pdf_url === '' && $observacoes === '') {
+        return '';
+    }
+
+    ob_start();
+    ?>
+    <div class="fmbrzp-documento-meta" style="border:1px solid #e1e1e1;padding:16px;border-radius:10px;">
+        <?php if ($numero !== '' || $data_formatada !== '') : ?>
+            <div class="fmbrzp-documento-meta__linha" style="display:flex;gap:12px;flex-wrap:wrap;font-weight:600;">
+                <?php if ($numero !== '') : ?>
+                    <span class="fmbrzp-documento-meta__ref">Nº/Ref: <?php echo esc_html($numero); ?></span>
+                <?php endif; ?>
+                <?php if ($data_formatada !== '') : ?>
+                    <span class="fmbrzp-documento-meta__data">Data: <?php echo esc_html($data_formatada); ?></span>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($ementa !== '') : ?>
+            <div class="fmbrzp-documento-meta__ementa" style="margin-top:10px;">
+                <?php echo esc_html($ementa); ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($pdf_url !== '') : ?>
+            <div class="fmbrzp-documento-meta__arquivo" style="margin-top:12px;">
+                <a href="<?php echo esc_url($pdf_url); ?>" target="_blank" rel="noopener noreferrer" class="fmbrzp-documento-meta__botao" style="display:inline-block;background:#0f3460;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:600;">
+                    📄 Baixar PDF
+                </a>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($observacoes !== '') : ?>
+            <div class="fmbrzp-documento-meta__obs" style="margin-top:12px;">
+                <?php echo wp_kses_post(wpautop($observacoes)); ?>
+            </div>
+        <?php endif; ?>
+    </div>
+    <?php
+    return ob_get_clean();
+});
+
+/**
+ * FMBRZP - Garantir ACF metabox + desativar Gutenberg para CPT Documento(s)
+ */
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
+/**
+ * Desativa o editor de blocos (Gutenberg) para os CPTs de documentos.
+ * Ajuste os slugs aqui se necessário.
+ */
+add_filter('use_block_editor_for_post_type', function ($use_block_editor, $post_type) {
+    $targets = ['documento', 'documentos']; // cobre os dois casos comuns
+    if (in_array($post_type, $targets, true)) {
+        return false;
+    }
+    return $use_block_editor;
+}, 10, 2);
+
+/**
+ * Resolve o link externo do PDF via ACF ou meta padrão.
+ */
+function fmbrzp_get_documento_pdf_link($post_id) {
+    if (!$post_id) {
+        return '';
+    }
+
+    $raw = '';
+    if (function_exists('get_field')) {
+        $raw = get_field('link_do_pdf', $post_id);
+    }
+    if ($raw === '' || $raw === null) {
+        $raw = get_post_meta($post_id, 'link_do_pdf', true);
+    }
+
+    if (!is_string($raw) || $raw === '') {
+        return '';
+    }
+
+    $url = esc_url_raw($raw);
+    if ($url === '') {
+        return '';
+    }
+
+    $validated = wp_http_validate_url($url);
+    if (!$validated) {
+        return '';
+    }
+
+    $scheme = wp_parse_url($validated, PHP_URL_SCHEME);
+    if (!in_array($scheme, ['http', 'https'], true)) {
+        return '';
+    }
+
+    return $validated;
+}
+
+/**
+ * Troca o permalink do CPT documento pelo link externo do PDF (quando existir).
+ */
+function fmbrzp_documento_external_permalink($permalink, $post) {
+    if (!($post instanceof WP_Post) || $post->post_type !== 'documento') {
+        return $permalink;
+    }
+
+    $external = fmbrzp_get_documento_pdf_link($post->ID);
+    if ($external === '') {
+        return $permalink;
+    }
+
+    return $external;
+}
+
+add_filter('post_type_link', 'fmbrzp_documento_external_permalink', 10, 2);
+add_filter('post_link', 'fmbrzp_documento_external_permalink', 10, 2);
+
+/**
+ * Redireciona acessos diretos ao single do documento para o PDF externo.
+ */
+add_action('template_redirect', function() {
+    if (is_admin() || !is_singular('documento')) {
+        return;
+    }
+
+    $post_id = get_queried_object_id();
+    $external = fmbrzp_get_documento_pdf_link($post_id);
+    if ($external === '') {
+        return;
+    }
+
+    $current = (is_ssl() ? 'https://' : 'http://') . ($_SERVER['HTTP_HOST'] ?? '') . ($_SERVER['REQUEST_URI'] ?? '');
+    $current = esc_url_raw($current);
+    if ($current !== '' && wp_validate_redirect($current) === $external) {
+        return;
+    }
+
+    wp_safe_redirect($external, 302);
+    exit;
+});
+
+/**
+ * Melhor esforço: abre PDFs externos em nova aba no front-end.
+ */
+add_action('wp_footer', function() {
+    if (is_admin()) {
+        return;
+    }
+    ?>
+    <script>
+    (function() {
+        var links = document.querySelectorAll('a[href]');
+        if (!links.length) return;
+        var host = window.location.host;
+        for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (!href || href.indexOf('http') !== 0) continue;
+            var isExternal = href.indexOf('//' + host) === -1;
+            if (!isExternal) continue;
+            var isPdf = /\.pdf(\?|#|$)/i.test(href) || href.indexOf('drive.google.com') !== -1;
+            if (!isPdf) continue;
+            links[i].setAttribute('target', '_blank');
+            var rel = links[i].getAttribute('rel') || '';
+            if (rel.indexOf('noopener') === -1) {
+                links[i].setAttribute('rel', (rel + ' noopener noreferrer').trim());
+            }
+        }
+    })();
+    </script>
+    <?php
+}, 100);
