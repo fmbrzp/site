@@ -1,0 +1,4152 @@
+/* FMBRZP institutional base styles */
+:root {
+    --fmbrzp-max-width: 1200px;
+    --fmbrzp-gold: #c6a24b;
+    --fmbrzp-red: #b51f27;
+    --fmbrzp-graphite: #2b2f33;
+    --fmbrzp-graphite-60: #5d6670;
+    --fmbrzp-text: var(--fmbrzp-graphite);
+    --fmbrzp-muted: var(--fmbrzp-graphite-60);
+    --fmbrzp-border: #e1e4e8;
+    --fmbrzp-bg: #f7f8fa;
+    --fmbrzp-accent: var(--fmbrzp-graphite);
+}
+
+body {
+    color: var(--fmbrzp-text);
+    line-height: 1.7;
+    font-family: "Merriweather", "Georgia", serif;
+}
+
+a {
+    color: var(--fmbrzp-graphite);
+}
+
+a:hover {
+    color: var(--fmbrzp-gold);
+}
+
+.main-header-menu .menu-link {
+    color: var(--fmbrzp-graphite);
+}
+
+.main-header-menu .menu-item:hover > .menu-link,
+.main-header-menu .menu-item:focus-within > .menu-link {
+    color: var(--fmbrzp-gold);
+}
+
+.main-header-menu .menu-item.current-menu-item > .menu-link,
+.main-header-menu .menu-item.current_page_item > .menu-link {
+    color: var(--fmbrzp-red);
+}
+
+.fmbrzp-sr-only {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.fmbrzp-container {
+    max-width: var(--fmbrzp-max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.site-content .ast-container {
+    max-width: var(--fmbrzp-max-width);
+}
+
+.entry-content,
+.entry-summary {
+    font-size: 1rem;
+}
+
+.entry-content p,
+.entry-summary p,
+.entry-content ul,
+.entry-content ol {
+    margin-bottom: 1.1em;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    line-height: 1.25;
+    margin: 1.2em 0 0.5em;
+    color: var(--fmbrzp-accent);
+}
+
+.entry-content ul,
+.entry-content ol {
+    padding-left: 1.25em;
+}
+
+.main-header-bar {
+    background: var(--fmbrzp-bg);
+    border-bottom: 2px solid rgba(177, 31, 39, 0.35);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.site-title a,
+.site-title a:visited {
+    color: var(--fmbrzp-accent);
+    letter-spacing: 0.5px;
+}
+
+.fmbrzp-site-identity {
+    display: inline-flex;
+    align-items: center;
+}
+
+.fmbrzp-site-identity .custom-logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.fmbrzp-logo {
+    max-height: 64px;
+    max-width: 240px;
+    width: auto;
+}
+
+.site-footer .site-below-footer,
+.site-footer .footer-adv-overlay {
+    background: var(--fmbrzp-bg);
+    border-top: 1px solid var(--fmbrzp-border);
+}
+
+.site-footer {
+    color: var(--fmbrzp-muted);
+}
+
+/* News list (blog/archive) */
+.blog .ast-article-post,
+.archive .ast-article-post {
+    background: #ffffff;
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-bottom: 26px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.blog .ast-article-post .entry-title,
+.archive .ast-article-post .entry-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.35em;
+}
+
+.blog .ast-article-post .entry-title a,
+.archive .ast-article-post .entry-title a {
+    color: var(--fmbrzp-accent);
+    text-decoration: none;
+}
+
+.blog .ast-article-post .entry-title a:hover,
+.archive .ast-article-post .entry-title a:hover {
+    text-decoration: underline;
+}
+
+.blog .ast-article-post .entry-meta,
+.archive .ast-article-post .entry-meta {
+    color: var(--fmbrzp-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+}
+
+.blog .ast-article-post .post-thumb img,
+.archive .ast-article-post .post-thumb img {
+    border-radius: 6px;
+}
+
+/* Subtle category highlights */
+.ast-article-post.category-comunicados-oficiais {
+    border-left: 4px solid #cbd5e1;
+}
+
+.ast-article-post.category-editais {
+    border-left: 4px solid #d1d5db;
+}
+
+.ast-article-post.category-regulamentos {
+    border-left: 4px solid #e5e7eb;
+}
+
+.ast-article-post.category-comunicados-oficiais .entry-header:before,
+.ast-article-post.category-editais .entry-header:before,
+.ast-article-post.category-regulamentos .entry-header:before {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4b5563;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    content: "Categoria";
+}
+
+.ast-article-post.category-comunicados-oficiais .entry-header:before {
+    content: "Comunicados";
+}
+
+.ast-article-post.category-editais .entry-header:before {
+    content: "Editais";
+}
+
+.ast-article-post.category-regulamentos .entry-header:before {
+    content: "Regulamentos";
+}
+
+@media (max-width: 768px) {
+    .blog .ast-article-post,
+    .archive .ast-article-post {
+        padding: 18px 18px;
+    }
+}
+/* Home + Transparency layouts */
+.fmbrzp-hero {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    min-height: 380px;
+    max-height: 520px;
+    height: 45vh;
+    padding: 16px 0 18px;
+    background: #ffffff url("../img/hero-bg.png") no-repeat center right/cover;
+    border-bottom: 1px solid var(--fmbrzp-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fmbrzp-hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.fmbrzp-hero .fmbrzp-container,
+.fmbrzp-hero .ast-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.fmbrzp-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.86);
+    z-index: 0;
+}
+
+.fmbrzp-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    animation: fmbrzp-hero-fade 0.45s ease-out both;
+}
+
+@keyframes fmbrzp-hero-fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fmbrzp-hero__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fmbrzp-hero__logo {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+}
+
+.fmbrzp-hero__title {
+    font-size: 1.7rem;
+    margin-bottom: 0.35em;
+}
+
+.fmbrzp-hero__text {
+    max-width: 70ch;
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-hero .fmbrzp-hero__name {
+    font-weight: 900;
+    color: var(--fmbrzp-accent);
+    font-size: 1.55rem;
+    margin-bottom: 0.08em;
+    line-height: 1.08;
+    letter-spacing: 0.03em;
+}
+
+.fmbrzp-hero__sigla {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: var(--fmbrzp-red);
+    margin-bottom: 0.1em;
+    font-weight: 600;
+}
+
+.fmbrzp-hero__text p {
+    max-width: 600px;
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+
+.fmbrzp-news {
+    background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+}
+
+.fmbrzp-home .fmbrzp-news {
+    padding-top: 18px;
+}
+
+.fmbrzp-news .fmbrzp-container {
+    display: grid;
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+    column-gap: 32px;
+    align-items: start;
+    row-gap: 10px;
+}
+
+.fmbrzp-quick {
+    background: #ffffff;
+}
+
+.site-footer {
+    background: #f7f8fa;
+}
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer::before,
+.site-footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 360px;
+    height: 220px;
+    background: url("../img/hero-institucional.png") no-repeat bottom right/contain;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.site-footer::before {
+    left: 0;
+    transform: scaleX(-1);
+    background-position: bottom left;
+}
+
+.site-footer::after {
+    right: 0;
+}
+
+.site-footer .ast-container {
+    position: relative;
+    z-index: 1;
+}
+
+.fmbrzp-section {
+    padding: 26px 0;
+}
+
+.fmbrzp-section + .fmbrzp-section {
+    padding-top: 22px;
+}
+
+.fmbrzp-section__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.fmbrzp-section__header h2 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.fmbrzp-news .fmbrzp-section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0;
+    grid-column: 1;
+}
+
+.fmbrzp-news .fmbrzp-section__header h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.fmbrzp-news__subtitle {
+    margin: 0;
+    font-size: 0.98rem;
+    color: var(--fmbrzp-muted);
+    font-weight: 400;
+    max-width: 22rem;
+}
+
+.fmbrzp-news .fmbrzp-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--fmbrzp-red);
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid rgba(177, 18, 26, 0.25);
+    background: transparent;
+    align-self: flex-start;
+}
+
+.fmbrzp-news .fmbrzp-link:hover {
+    border-color: rgba(177, 18, 26, 0.45);
+}
+
+.fmbrzp-link {
+    color: var(--fmbrzp-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fmbrzp-link:hover {
+    text-decoration: underline;
+}
+
+.fmbrzp-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.fmbrzp-grid--news {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column: 2;
+}
+
+.fmbrzp-grid--quick {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fmbrzp-grid--news,
+.fmbrzp-grid--quick {
+    gap: 22px;
+}
+
+.fmbrzp-grid--transparency {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.fmbrzp-grid > * {
+    height: 100%;
+}
+
+.fmbrzp-card {
+    background: #ffffff;
+    border: 1px solid rgba(43, 47, 51, 0.12);
+    border-radius: 10px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(43, 47, 51, 0.06);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fmbrzp-news .fmbrzp-card {
+    box-shadow: 0 1px 8px rgba(43, 47, 51, 0.08);
+    min-height: 100%;
+}
+
+.fmbrzp-news .fmbrzp-card:hover {
+    box-shadow: 0 4px 12px rgba(43, 47, 51, 0.1);
+}
+
+.fmbrzp-card__media {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: #f7f7f7;
+}
+
+.fmbrzp-card__image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.fmbrzp-card__title {
+    margin: 0 0 0.45em;
+    font-size: 1.15rem;
+}
+
+.fmbrzp-news .fmbrzp-card__title {
+    margin-bottom: 0.4em;
+}
+
+.fmbrzp-news .fmbrzp-card__title {
+    font-size: 1.15rem;
+    font-weight: 750;
+}
+
+.fmbrzp-card__title a {
+    color: var(--fmbrzp-accent);
+    text-decoration: none;
+}
+
+.fmbrzp-card__title a:hover {
+    text-decoration: underline;
+}
+
+.fmbrzp-card__label {
+    font-weight: 600;
+    color: var(--fmbrzp-accent);
+}
+
+.fmbrzp-card--quick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.fmbrzp-quick .fmbrzp-section__header h2 {
+    font-size: 1.6rem;
+}
+
+.fmbrzp-card--quick::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+}
+
+.fmbrzp-quick-comunicados-oficiais::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M6 3.5h8l4 4v13H6z' stroke='%23B1121A' stroke-width='1.6'/%3E%3Cpath d='M14 3.5v4h4' stroke='%23B1121A' stroke-width='1.6'/%3E%3Cpath d='M8.5 12h7' stroke='%23B1121A' stroke-width='1.4'/%3E%3Cpath d='M8.5 15.5h7' stroke='%23B1121A' stroke-width='1.4'/%3E%3C/svg%3E");
+}
+
+.fmbrzp-quick-editais::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M7 3.5h8l2.5 2.5v14H7z' stroke='%23B1121A' stroke-width='1.6'/%3E%3Cpath d='M9 9h7' stroke='%23B1121A' stroke-width='1.4'/%3E%3Cpath d='M9 12.5h7' stroke='%23B1121A' stroke-width='1.4'/%3E%3Cpath d='M9 16h4' stroke='%23B1121A' stroke-width='1.4'/%3E%3C/svg%3E");
+}
+
+.fmbrzp-quick-regulamentos::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M6 4.5h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6z' stroke='%23B1121A' stroke-width='1.6'/%3E%3Cpath d='M9 8h7' stroke='%23B1121A' stroke-width='1.4'/%3E%3Cpath d='M9 12h7' stroke='%23B1121A' stroke-width='1.4'/%3E%3Cpath d='M9 16h5' stroke='%23B1121A' stroke-width='1.4'/%3E%3C/svg%3E");
+}
+
+.fmbrzp-card--quick .fmbrzp-card__label {
+    padding-left: 0;
+}
+
+.fmbrzp-card--quick:hover {
+    border-color: rgba(177, 18, 26, 0.25);
+}
+
+.fmbrzp-card--quick.fmbrzp-quick-transparencia::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M2 12c1.8-4.2 5.5-7 10-7s8.2 2.8 10 7c-1.8 4.2-5.5 7-10 7s-8.2-2.8-10-7z' stroke='%23B1121A' stroke-width='1.6'/%3E%3Ccircle cx='12' cy='12' r='3' stroke='%23B1121A' stroke-width='1.6'/%3E%3C/svg%3E");
+}
+
+.fmbrzp-meta {
+    font-size: 0.85rem;
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-news .fmbrzp-meta {
+    font-size: 0.82rem;
+    color: #6b7280;
+}
+
+.fmbrzp-meta__sep {
+    margin: 0 6px;
+}
+
+.fmbrzp-news .fmbrzp-meta__date {
+    font-weight: 600;
+    color: var(--fmbrzp-text);
+}
+
+.fmbrzp-news .fmbrzp-meta__cat a {
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    color: var(--fmbrzp-muted);
+    text-decoration: none;
+}
+
+.fmbrzp-transparency__intro {
+    background: var(--fmbrzp-bg);
+    border-bottom: 1px solid var(--fmbrzp-border);
+}
+
+.fmbrzp-card__text {
+    margin-bottom: 12px;
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-footer__name {
+    margin-right: 8px;
+}
+
+.fmbrzp-footer__sigla {
+    margin-right: 8px;
+    color: var(--fmbrzp-red);
+    font-weight: 600;
+}
+
+.fmbrzp-footer__copyright {
+    color: var(--fmbrzp-muted);
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .fmbrzp-hero {
+        min-height: 52vh;
+        padding: 12px 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fmbrzp-hero {
+        min-height: 320px;
+        height: auto;
+        max-height: none;
+        padding: 14px 0 16px;
+    }
+
+    .fmbrzp-hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .fmbrzp-hero__logo { width: 160px; }
+
+    .fmbrzp-hero__text {
+        margin: 0 auto;
+    }
+
+    .fmbrzp-hero__content {
+        flex-direction: column;
+    }
+
+    .fmbrzp-hero__media--left {
+        order: 2;
+    }
+
+    .fmbrzp-hero__media--right {
+        order: 3;
+    }
+
+    .fmbrzp-hero__media {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .fmbrzp-section {
+        padding: 32px 0;
+    }
+
+    .fmbrzp-news .fmbrzp-container {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+
+    .fmbrzp-news .fmbrzp-section__header,
+    .fmbrzp-grid--news {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .fmbrzp-grid--news {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fmbrzp-grid--quick {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .fmbrzp-container {
+        padding: 0 16px;
+    }
+
+    .fmbrzp-grid--news,
+    .fmbrzp-grid--quick {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Institucional page */
+.fmbrzp-institucional-page {
+    scroll-behavior: smooth;
+}
+
+.fmbrzp-institucional-page .fmbrzp-institucional {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-institucional section {
+    scroll-margin-top: 90px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-institucional-hero {
+    background: linear-gradient(135deg, rgba(247, 248, 250, 0.96), rgba(255, 255, 255, 0.98)),
+        url("/wp-content/themes/fmbrzp-child/assets/img/hero-institucional.png") center/cover no-repeat;
+    border-bottom: 1px solid var(--fmbrzp-border);
+    padding: 48px 0 32px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-institucional-hero h1,
+.fmbrzp-institucional-page .fmbrzp-nav-title {
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page .fmbrzp-hero-inner {
+    display: grid;
+    gap: 12px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--fmbrzp-muted);
+    max-width: 820px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-hero-status {
+    font-size: 0.95rem;
+    color: var(--fmbrzp-text);
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav {
+    padding: 12px 0 4px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-title {
+    margin-bottom: 12px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button {
+    flex: 1 1 calc(33.333% - 12px);
+    min-width: 220px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid var(--fmbrzp-border);
+    color: var(--fmbrzp-text);
+    border-radius: 999px;
+    padding: 10px 16px;
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button__link::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%23b11218'%3E%3Cpath d='M12 2l2.09 5.26L20 8l-4 3.74L17.18 18 12 14.77 6.82 18 8 11.74 4 8l5.91-.74L12 2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button__link:hover,
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button__link:focus {
+    background: var(--fmbrzp-red);
+    border-color: var(--fmbrzp-red);
+    color: #ffffff;
+}
+
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button__link:hover::before,
+.fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button__link:focus::before {
+    filter: brightness(0) invert(1);
+}
+
+.fmbrzp-institucional-page .fmbrzp-section {
+    background: #ffffff;
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 16px;
+    padding: 28px 32px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-section > h2,
+.fmbrzp-institucional-page .fmbrzp-section > h3 {
+    color: var(--ast-global-color-0);
+    padding-left: 12px;
+    border-left: 3px solid currentColor;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cards {
+    align-items: stretch;
+    gap: 18px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cards .wp-block-column {
+    display: flex;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cards .wp-block-column > .wp-block-group {
+    width: 100%;
+}
+
+.fmbrzp-institucional-page .fmbrzp-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.fmbrzp-institucional-page .fmbrzp-card > p,
+.fmbrzp-institucional-page .fmbrzp-card > ul {
+    flex: 1;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-card > p,
+.fmbrzp-institucional-page .fmbrzp-clube-card > ul,
+.fmbrzp-institucional-page .fmbrzp-clube-card .fmbrzp-clube-nome,
+.fmbrzp-institucional-page .fmbrzp-clube-card .fmbrzp-clube-cidade {
+    flex: 0;
+}
+
+.fmbrzp-institucional-page .fmbrzp-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(177, 18, 24, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fmbrzp-institucional-page .fmbrzp-card__icon::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='%23b11218'%3E%3Cpath d='M12 3a9 9 0 1 0 9 9c0-4.97-4.03-9-9-9zm0 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fmbrzp-institucional-page .fmbrzp-card--featured {
+    border-color: rgba(177, 18, 24, 0.35);
+    background: linear-gradient(135deg, rgba(177, 18, 24, 0.08), rgba(255, 255, 255, 0.9));
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-cards {
+    align-items: stretch;
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--ast-global-color-0) 12%, transparent);
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-card-icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 0 0;
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-bullets li {
+    position: relative;
+    padding-left: 16px;
+    margin: 8px 0;
+    line-height: 1.55;
+    color: var(--fmbrzp-text);
+}
+
+.fmbrzp-institucional-page .fmbrzp-modalidades .fmbrzp-bullets li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--ast-global-color-0);
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+}
+
+.fmbrzp-institucional-page #missao-visao-valores .fmbrzp-card ul li::marker {
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page #governanca ul li::marker {
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page #finalidade ul li::marker {
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page #quem-somos ul li::marker {
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-card {
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    padding-bottom: 16px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(17, 24, 39, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-logo .wp-block-image {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid--fundadores .fmbrzp-clube-logo {
+    height: 140px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros .fmbrzp-clube-logo {
+    height: 115px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-nome {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.15;
+    min-height: 2.3em;
+    margin: 0 0 2px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-cidade {
+    min-height: 1.2em;
+    margin: 6px 0 0;
+    font-size: 0.95em;
+    line-height: 1.25;
+    min-height: calc(1.25em * 2);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros .fmbrzp-clube-card {
+    padding: 12px 12px;
+    flex: 0 1 calc(20% - 13px);
+    max-width: calc(20% - 13px);
+    height: 240px;
+    align-self: stretch;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid:not(.fmbrzp-clubes-grid--parceiros) .fmbrzp-clube-card {
+    height: 280px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros > * {
+    margin-top: 0 !important;
+}
+
+.fmbrzp-institucional-page .fmbrzp-clube-card > .fmbrzp-clube-logo,
+.fmbrzp-institucional-page .fmbrzp-clube-card > .fmbrzp-clube-nome,
+.fmbrzp-institucional-page .fmbrzp-clube-card > .fmbrzp-clube-cidade {
+    margin: 0;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cta {
+    background: linear-gradient(135deg, rgba(177, 18, 24, 0.1), rgba(255, 255, 255, 0.92));
+    border-top: 1px solid var(--fmbrzp-border);
+    border-bottom: 1px solid var(--fmbrzp-border);
+    padding: 40px 0;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cta__inner {
+    display: grid;
+    gap: 16px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fmbrzp-institucional-page .fmbrzp-cta__actions .wp-block-button {
+    margin: 0;
+}
+
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    min-height: 46px;
+    min-width: 190px;
+    border-radius: 999px;
+    font-weight: 600;
+    line-height: 1.1;
+    border: 2px solid var(--ast-global-color-0);
+    background: transparent;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    color: inherit;
+    transition: transform 0.2s ease, filter 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn--primary {
+    background-color: var(--ast-global-color-0);
+    color: var(--ast-global-color-5);
+}
+
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn--secondary {
+    background: transparent;
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn:hover,
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn:focus {
+    filter: brightness(0.96);
+    transform: translateY(-1px);
+}
+
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn--secondary:hover,
+.fmbrzp-institucional-page .wp-block-button__link.fmbrzp-btn--secondary:focus {
+    background: var(--ast-global-color-0);
+    color: var(--ast-global-color-5);
+}
+
+.fmbrzp-institucional-page .fmbrzp-cta__actions .wp-block-button__link {
+    font-weight: 600;
+}
+
+.fmbrzp-institucional-page .fmbrzp-governanca-actions .wp-block-button__link {
+    background: transparent;
+    border: 1px solid var(--fmbrzp-border);
+    color: var(--fmbrzp-text);
+}
+
+.fmbrzp-institucional-page .fmbrzp-governanca-actions .wp-block-button__link:hover {
+    border-color: var(--fmbrzp-red);
+    color: var(--fmbrzp-red);
+}
+
+@media (max-width: 960px) {
+    .fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button {
+        flex: 1 1 calc(50% - 12px);
+    }
+}
+
+@media (max-width: 768px) {
+    .fmbrzp-institucional-page .fmbrzp-nav-chips .wp-block-button {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .fmbrzp-institucional-page .fmbrzp-section {
+        padding: 24px;
+    }
+
+    .fmbrzp-institucional-page .fmbrzp-institucional section {
+        scroll-margin-top: 72px;
+    }
+
+    .fmbrzp-institucional-page .fmbrzp-cta__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fmbrzp-institucional-page .fmbrzp-btn .wp-block-button__link {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros .fmbrzp-clube-card {
+        flex-basis: calc(25% - 12px);
+        max-width: calc(25% - 12px);
+    }
+}
+
+@media (max-width: 980px) {
+    .fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros .fmbrzp-clube-card {
+        flex-basis: calc(33.333% - 11px);
+        max-width: calc(33.333% - 11px);
+    }
+}
+
+@media (max-width: 720px) {
+    .fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros .fmbrzp-clube-card {
+        flex-basis: calc(50% - 8px);
+        max-width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 520px) {
+    .fmbrzp-institucional-page .fmbrzp-clubes-grid--parceiros .fmbrzp-clube-card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .fmbrzp-institucional-page .fmbrzp-cards--modalidades .fmbrzp-card,
+    .fmbrzp-institucional-page .fmbrzp-cards--mvv .fmbrzp-card {
+        min-height: 240px;
+    }
+}
+
+/* Calendario page */
+.fmbrzp-calendario-page,
+.fmbrzp-calendario-ano-page {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Calendar root override (Astra-safe) */
+.fmbrzp-calendar-root {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+.fmbrzp-calendar-root * {
+    box-sizing: border-box !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-hero {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 28px 28px 24px !important;
+    margin: 0 0 20px !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-hero h1 {
+    margin: 0 0 8px !important;
+    font-size: 1.75rem !important;
+    color: #1f2937 !important;
+    padding-left: 12px !important;
+    border-left: 3px solid #b10f1a !important;
+    line-height: 1.2 !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-hero p {
+    margin: 0 !important;
+    color: #4b5563 !important;
+    max-width: 720px !important;
+}
+
+.fmbrzp-calendario-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg,
+.fmbrzp-calendario-ano-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg {
+    position: relative !important;
+    overflow: hidden !important;
+    background-image: var(--fmbrzp-cal-hero-bg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 34px 34px 30px !important;
+}
+
+.fmbrzp-calendario-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg::before,
+.fmbrzp-calendario-ano-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    z-index: 0 !important;
+}
+
+.fmbrzp-calendario-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg > *,
+.fmbrzp-calendario-ano-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg > * {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.fmbrzp-calendario-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg h1,
+.fmbrzp-calendario-ano-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg h1 {
+    color: var(--ast-global-color-0) !important;
+}
+
+.fmbrzp-calendario-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg p,
+.fmbrzp-calendario-ano-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg p {
+    color: var(--fmbrzp-muted) !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-year-selector {
+    margin-bottom: 24px !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-month {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 22px 22px 24px !important;
+    margin-bottom: 20px !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-month-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-month-header .month-bar {
+    display: inline-block !important;
+    width: 4px !important;
+    height: 22px !important;
+    background: #b10f1a !important;
+    border-radius: 4px !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-month-header h2 {
+    margin: 0 !important;
+    font-size: 1.25rem !important;
+    color: #1f2937 !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+    grid-auto-rows: 1fr !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-event-card {
+    min-height: 240px !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08) !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-event-card h3 {
+    margin: 0 !important;
+    font-size: 1.02rem !important;
+    color: #111827 !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-event-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-event-meta {
+    display: grid !important;
+    gap: 6px !important;
+    color: #4b5563 !important;
+    font-size: 0.95rem !important;
+}
+
+.fmbrzp-calendar-root .pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 4px 10px !important;
+    border-radius: 999px !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    border: 1px solid currentColor !important;
+    background: #f9fafb !important;
+}
+
+.fmbrzp-calendar-root .pill.modality-raffa {
+    color: #2e7d32 !important;
+    background: #e8f5e9 !important;
+    border-color: #2e7d32 !important;
+}
+
+.fmbrzp-calendar-root .pill.modality-zerbin {
+    color: #1565c0 !important;
+    background: #e3f2fd !important;
+    border-color: #1565c0 !important;
+}
+
+.fmbrzp-calendar-root .pill.modality-petanca {
+    color: #ef6c00 !important;
+    background: #fff3e0 !important;
+    border-color: #ef6c00 !important;
+}
+
+.fmbrzp-calendar-root .pill.modality-regional {
+    color: #6d4c41 !important;
+    background: #efebe9 !important;
+    border-color: #6d4c41 !important;
+}
+
+.fmbrzp-calendar-root .pill.status-confirmado {
+    color: #2e7d32 !important;
+    background: #e8f5e9 !important;
+    border-color: #2e7d32 !important;
+}
+
+.fmbrzp-calendar-root .pill.status-disponivel {
+    color: #2e7d32 !important;
+    background: #e8f5e9 !important;
+    border-color: #2e7d32 !important;
+}
+
+.fmbrzp-calendar-root .pill.status-previsto {
+    color: #f9a825 !important;
+    background: #fff8e1 !important;
+    border-color: #f9a825 !important;
+}
+
+.fmbrzp-calendar-root .pill.status-cancelado {
+    color: #c62828 !important;
+    background: #ffebee !important;
+    border-color: #c62828 !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 16px !important;
+    border-radius: 999px !important;
+    border: 2px solid #b10f1a !important;
+    color: #b10f1a !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+}
+
+.fmbrzp-calendar-root .fmbrzp-calendar-btn:hover,
+.fmbrzp-calendar-root .fmbrzp-calendar-btn:focus {
+    background: #b10f1a !important;
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    .fmbrzp-calendario-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg,
+    .fmbrzp-calendario-ano-page .fmbrzp-calendar-hero.fmbrzp-cal-hero--bg {
+        padding: 22px 20px 20px !important;
+    }
+
+    .fmbrzp-calendar-root .fmbrzp-calendar-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-hero,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-hero {
+    background: var(--ast-global-color-5);
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 16px;
+    padding: 32px 32px 28px;
+    margin-bottom: 8px;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-hero__grid,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 12px 20px;
+    align-items: center;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-hero__title,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-hero__title {
+    color: var(--ast-global-color-0);
+    margin: 0 0 8px;
+    padding-left: 12px;
+    border-left: 3px solid currentColor;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-hero__sub,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-hero__sub {
+    color: var(--fmbrzp-muted);
+    max-width: 720px;
+    margin: 0;
+}
+
+.fmbrzp-calendario-page .fmbrzp-calendario-section,
+.fmbrzp-calendario-ano-page .fmbrzp-calendario-section {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.fmbrzp-calendario-page .fmbrzp-section-title,
+.fmbrzp-calendario-ano-page .fmbrzp-section-title {
+    color: var(--ast-global-color-0);
+    padding-left: 12px;
+    border-left: 3px solid currentColor;
+    margin-bottom: 16px;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-grid--years {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-card,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card {
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    background: var(--ast-global-color-5);
+    min-height: 220px;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-card__title,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card__title {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-card__text,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card__text {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card__date,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card__category,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-card__location {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+    font-size: 0.95rem;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-month {
+    background: var(--ast-global-color-5);
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: grid;
+    gap: 16px;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-month__header {
+    display: flex;
+    align-items: center;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-month__title {
+    margin: 0;
+    color: var(--ast-global-color-0);
+    padding-left: 12px;
+    border-left: 3px solid currentColor;
+    font-size: 1.25rem;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-month__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+    align-content: flex-start;
+    grid-auto-rows: 1fr;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-event {
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    min-height: 210px;
+    background: var(--ast-global-color-5);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-event__title {
+    margin: 0;
+    font-size: 1.02rem;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-event__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-event__date,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-event__category,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-event__location {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+    font-size: 0.95rem;
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-pill,
+.fmbrzp-calendario-ano-page .fmbrzp-cal-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 {
+    --cal-mod-raffa: var(--ast-global-color-2);
+    --cal-mod-zerbin: var(--ast-global-color-1);
+    --cal-mod-petanca: var(--ast-global-color-3);
+    --cal-mod-regional: var(--ast-global-color-4);
+    --cal-st-confirmado: var(--ast-global-color-2);
+    --cal-st-previsto: var(--ast-global-color-3);
+    --cal-st-cancelado: var(--ast-global-color-0);
+}
+
+.fmbrzp-calendario-page {
+    --cal-st-disponivel: var(--ast-global-color-2);
+    --cal-st-em-breve: var(--ast-global-color-4);
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-pill.cal-status--disponivel {
+    color: var(--cal-st-disponivel);
+    border-color: color-mix(in srgb, var(--cal-st-disponivel) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-st-disponivel) 14%, transparent);
+}
+
+.fmbrzp-calendario-page .fmbrzp-cal-pill.cal-status--em-breve {
+    color: var(--cal-st-em-breve);
+    border-color: color-mix(in srgb, var(--cal-st-em-breve) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-st-em-breve) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page .fmbrzp-cal-pill.cal-status--previsto {
+    color: var(--ast-global-color-3);
+    border-color: color-mix(in srgb, var(--ast-global-color-3) 40%, transparent);
+    background: color-mix(in srgb, var(--ast-global-color-3) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-mod--raffa {
+    color: var(--cal-mod-raffa);
+    border-color: color-mix(in srgb, var(--cal-mod-raffa) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-mod-raffa) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-mod--zerbin {
+    color: var(--cal-mod-zerbin);
+    border-color: color-mix(in srgb, var(--cal-mod-zerbin) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-mod-zerbin) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-mod--petanca {
+    color: var(--cal-mod-petanca);
+    border-color: color-mix(in srgb, var(--cal-mod-petanca) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-mod-petanca) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-mod--regional {
+    color: var(--cal-mod-regional);
+    border-color: color-mix(in srgb, var(--cal-mod-regional) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-mod-regional) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-status--confirmado {
+    color: var(--cal-st-confirmado);
+    border-color: color-mix(in srgb, var(--cal-st-confirmado) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-st-confirmado) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-status--previsto {
+    color: var(--cal-st-previsto);
+    border-color: color-mix(in srgb, var(--cal-st-previsto) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-st-previsto) 14%, transparent);
+}
+
+.fmbrzp-calendario-ano-page.fmbrzp-calendario-2026 .fmbrzp-cal-pill.cal-status--cancelado {
+    color: var(--cal-st-cancelado);
+    border-color: color-mix(in srgb, var(--cal-st-cancelado) 40%, transparent);
+    background: color-mix(in srgb, var(--cal-st-cancelado) 14%, transparent);
+}
+
+.fmbrzp-calendario-page .fmbrzp-btn,
+.fmbrzp-calendario-ano-page .fmbrzp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    min-height: 40px;
+    border-radius: 999px;
+    border: 2px solid var(--ast-global-color-0);
+    color: var(--ast-global-color-0);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, filter 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    background: transparent;
+}
+
+.fmbrzp-calendario-page .fmbrzp-btn:hover,
+.fmbrzp-calendario-page .fmbrzp-btn:focus,
+.fmbrzp-calendario-ano-page .fmbrzp-btn:hover,
+.fmbrzp-calendario-ano-page .fmbrzp-btn:focus {
+    background: var(--ast-global-color-0);
+    color: var(--ast-global-color-5);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .fmbrzp-calendario-page .fmbrzp-cal-hero__grid,
+    .fmbrzp-calendario-ano-page .fmbrzp-cal-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fmbrzp-calendario-ano-page .fmbrzp-cal-month {
+        padding: 22px 22px;
+    }
+
+    .fmbrzp-calendario-ano-page .fmbrzp-cal-month__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fmbrzp-calendario-page .fmbrzp-cal-grid,
+    .fmbrzp-calendario-page .fmbrzp-cal-grid--years {
+        grid-template-columns: 1fr;
+    }
+
+    .fmbrzp-calendario-page .fmbrzp-calendario-section,
+    .fmbrzp-calendario-ano-page .fmbrzp-calendario-section {
+        padding: 0;
+    }
+}
+/* Noticias page */
+.fmbrzp-noticias-page {
+    background: var(--ast-global-color-5);
+}
+
+.fmbrzp-noticias-page .fmbrzp-cal-hero {
+    position: relative;
+    overflow: hidden;
+    background-image: var(--fmbrzp-cal-hero-bg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 12px;
+    padding: 30px 28px 26px;
+    margin: 0 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-cal-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 0;
+}
+
+.fmbrzp-noticias-page .fmbrzp-cal-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.fmbrzp-noticias-page .fmbrzp-cal-hero__title {
+    margin: 0;
+    color: var(--ast-global-color-0);
+    font-size: 1.8rem;
+    padding-left: 12px;
+    border-left: 3px solid var(--ast-global-color-0);
+}
+
+.fmbrzp-noticias-page .fmbrzp-cal-hero__sub {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+    max-width: 720px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-list {
+    padding-bottom: 32px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card {
+    height: 100%;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__link:visited {
+    color: inherit;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__link:focus-visible {
+    outline: 2px solid var(--ast-global-color-0);
+    outline-offset: 3px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__media {
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--fmbrzp-bg);
+    border: 1px solid var(--fmbrzp-border);
+    height: 180px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: var(--fmbrzp-muted);
+    font-size: 0.85rem;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__date {
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__category {
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--fmbrzp-border);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__title {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--fmbrzp-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6em;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card__excerpt {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-card:hover {
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-pagination {
+    margin-top: 26px;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-pagination ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-pagination a,
+.fmbrzp-noticias-page .fmbrzp-news-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--fmbrzp-border);
+    color: var(--fmbrzp-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-pagination .current {
+    border-color: var(--ast-global-color-0);
+    color: var(--ast-global-color-0);
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-empty {
+    text-align: center;
+}
+
+.fmbrzp-noticias-page .fmbrzp-news-empty__title {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+}
+
+@media (max-width: 1024px) {
+    .fmbrzp-noticias-page .fmbrzp-news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .fmbrzp-noticias-page .fmbrzp-cal-hero {
+        padding: 22px 20px 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .fmbrzp-noticias-page .fmbrzp-news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Transparencia page */
+.fmbrzp-transparencia-page {
+    background: var(--ast-global-color-5);
+    padding-bottom: 32px;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-cal-hero {
+    position: relative;
+    overflow: hidden;
+    background-image: var(--fmbrzp-cal-hero-bg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--fmbrzp-border);
+    border-radius: 12px;
+    padding: 30px 28px 26px;
+    margin: 0 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-cal-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 0;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-cal-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-cal-hero__title {
+    margin: 0;
+    color: var(--ast-global-color-0);
+    font-size: 1.8rem;
+    padding-left: 12px;
+    border-left: 3px solid var(--ast-global-color-0);
+}
+
+.fmbrzp-transparencia-page .fmbrzp-cal-hero__sub {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+    max-width: 720px;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-grid {
+    padding: 0 24px;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-grid__inner {
+    max-width: var(--fmbrzp-max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card {
+    height: 100%;
+    min-height: 180px;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card__link:focus-visible {
+    outline: 2px solid var(--ast-global-color-0);
+    outline-offset: 3px;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card__title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--fmbrzp-text);
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card__text {
+    margin: 0;
+    color: var(--fmbrzp-muted);
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card__cta {
+    color: var(--ast-global-color-0);
+    font-weight: 600;
+}
+
+.fmbrzp-transparencia-page .fmbrzp-transparencia-card:hover {
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 768px) {
+    .fmbrzp-transparencia-page .fmbrzp-cal-hero {
+        padding: 22px 20px 20px;
+    }
+
+    .fmbrzp-transparencia-page .fmbrzp-transparencia-grid {
+        padding: 0 16px;
+    }
+
+    .fmbrzp-transparencia-page .fmbrzp-transparencia-grid__inner {
+        grid-template-columns: 1fr;
+    }
+}
+/* CONTATO ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ultra compacto (apenas /contato) */
+body.page-template-page-contato,
+body.page-template-page-contato .site,
+body.page-template-page-contato .site-content,
+body.page-template-page-contato #primary,
+body.page-template-page-contato .ast-container,
+body.page-template-page-contato .entry-content,
+body.page-template-page-contato .fmbrzp-contato-page,
+body.page-template-page-contato .fmbrzp-contato-wrap {
+  background: var(--ast-global-color-5) !important;
+}
+
+/* corta paddings/margens do Astra nessa pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡gina */
+body.page-template-page-contato .ast-container,
+body.page-template-page-contato .site-content,
+body.page-template-page-contato #primary,
+body.page-template-page-contato .entry-content {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+body.page-template-page-contato .fmbrzp-contato-page,
+body.page-template-page-contato .fmbrzp-contato-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 12px;
+}
+
+/* HERO bem menor */
+body.page-template-page-contato .fmbrzp-hero {
+  position: relative;
+  overflow: hidden;
+  background-image: var(--fmbrzp-contato-hero-bg);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0 0 10px;
+  min-height: 0;
+}
+
+body.page-template-page-contato .fmbrzp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--fmbrzp-bg);
+  opacity: 0.92;
+  z-index: 0;
+}
+
+body.page-template-page-contato .fmbrzp-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+body.page-template-page-contato .fmbrzp-hero__title {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  padding-left: 10px;
+  border-left: 3px solid var(--ast-global-color-0);
+  color: var(--ast-global-color-0);
+}
+
+body.page-template-page-contato .fmbrzp-hero__desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  max-width: 720px;
+  color: var(--fmbrzp-muted);
+}
+
+/* GRID compacto */
+body.page-template-page-contato .fmbrzp-contato-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+body.page-template-page-contato .fmbrzp-contato-title {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  padding-left: 10px;
+  border-left: 3px solid var(--ast-global-color-0);
+  color: var(--ast-global-color-0);
+}
+
+/* Cards bem menores */
+body.page-template-page-contato .fmbrzp-contato-cards {
+  display: grid;
+  gap: 10px;
+}
+
+body.page-template-page-contato .fmbrzp-contato-card {
+  padding: 12px;
+  gap: 6px;
+}
+
+body.page-template-page-contato .fmbrzp-contato-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--fmbrzp-text);
+}
+
+body.page-template-page-contato .fmbrzp-contato-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  color: var(--fmbrzp-muted);
+}
+
+/* botÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âµes menos ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­lula giganteÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â */
+body.page-template-page-contato .fmbrzp-contato-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--fmbrzp-red);
+  color: var(--fmbrzp-red);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* formulÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡rio compacto */
+body.page-template-page-contato .fmbrzp-contato-form {
+  display: grid;
+  gap: 10px;
+}
+
+body.page-template-page-contato .fmbrzp-contato-form label {
+  display: grid;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--fmbrzp-text);
+}
+
+body.page-template-page-contato .fmbrzp-contato-form input,
+body.page-template-page-contato .fmbrzp-contato-form select,
+body.page-template-page-contato .fmbrzp-contato-form textarea {
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  padding: 7px 10px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--fmbrzp-text);
+  background: var(--ast-global-color-5);
+}
+
+body.page-template-page-contato .fmbrzp-contato-form textarea {
+  min-height: 110px;
+  max-height: 140px;
+  resize: vertical;
+}
+
+body.page-template-page-contato .fmbrzp-contato-submit {
+  border: 0;
+  border-radius: 10px;
+  padding: 9px 14px;
+  background: var(--fmbrzp-red);
+  color: var(--ast-global-color-5);
+  font-weight: 600;
+  cursor: pointer;
+  justify-self: start;
+}
+
+body.page-template-page-contato .fmbrzp-contato-note {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--fmbrzp-muted);
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  body.page-template-page-contato .fmbrzp-contato-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  body.page-template-page-contato .fmbrzp-hero {
+    padding: 12px 14px;
+  }
+}
+/* =========================
+   CONTATO (compacto)
+   ========================= */
+body.page-template-page-contato {
+  background: var(--ast-global-color-5) !important;
+}
+
+body.page-template-page-contato .site-content,
+body.page-template-page-contato #primary,
+body.page-template-page-contato .ast-container,
+body.page-template-page-contato .entry-content {
+  background: var(--ast-global-color-5) !important;
+}
+
+body.page-template-page-contato .fmbrzp-contato-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 14px 22px;
+}
+
+/* HERO no padrÃƒÂ£o do NotÃƒÂ­cias (bloco central) */
+body.page-template-page-contato .fmbrzp-cal-hero {
+  max-width: 1120px;
+  margin: 0 auto 14px;
+  border-radius: 12px;
+  border: 1px solid var(--fmbrzp-border);
+  background-image: var(--fmbrzp-cal-hero-bg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 18px 16px;
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero::before{
+  content:"";
+  display: block;
+  position:absolute;
+  inset:0;
+  background: var(--ast-global-color-5);
+  opacity:.88;
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__title,
+body.page-template-page-contato .fmbrzp-cal-hero__sub {
+  position: relative;
+  z-index: 1;
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__title {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: var(--ast-global-color-0);
+  padding-left: 10px;
+  border-left: 3px solid var(--ast-global-color-0);
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__sub {
+  margin: 0;
+  color: var(--fmbrzp-muted);
+  max-width: 640px;
+  font-size: 0.95rem;
+}
+
+/* GRID 2 colunas mais compacto */
+body.page-template-page-contato .fmbrzp-contato-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+body.page-template-page-contato .fmbrzp-contato-panel{
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 12px;
+  background: var(--ast-global-color-5);
+  padding: 14px;
+}
+
+body.page-template-page-contato .fmbrzp-contato-title{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: var(--ast-global-color-0);
+  padding-left: 10px;
+  border-left: 3px solid var(--ast-global-color-0);
+}
+
+/* LISTA compacta (substitui cards gigantes) */
+body.page-template-page-contato .fmbrzp-contato-list{
+  display: grid;
+  gap: 8px;
+}
+
+body.page-template-page-contato .fmbrzp-contato-item{
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 10px;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  background: var(--ast-global-color-5);
+}
+
+body.page-template-page-contato .fmbrzp-contato-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--fmbrzp-red);
+  opacity: .9;
+  justify-self: center;
+}
+
+body.page-template-page-contato .fmbrzp-contato-meta{
+  min-width: 0;
+}
+
+body.page-template-page-contato .fmbrzp-contato-meta strong{
+  display:block;
+  font-size: .98rem;
+  line-height: 1.1;
+  color: var(--fmbrzp-text);
+  margin-bottom: 2px;
+}
+
+body.page-template-page-contato .fmbrzp-contato-meta span{
+  display:block;
+  font-size: .92rem;
+  color: var(--fmbrzp-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.page-template-page-contato .fmbrzp-contato-action{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--fmbrzp-red);
+  color: var(--fmbrzp-red);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body.page-template-page-contato .fmbrzp-contato-action:hover{
+  background: var(--fmbrzp-red);
+  color: var(--ast-global-color-5);
+}
+
+/* FORM compacto */
+body.page-template-page-contato .fmbrzp-form{
+  display: grid;
+  gap: 10px;
+}
+
+body.page-template-page-contato .fmbrzp-form label{
+  display: grid;
+  gap: 5px;
+  font-weight: 700;
+  color: var(--fmbrzp-text);
+  font-size: .92rem;
+}
+
+body.page-template-page-contato .fmbrzp-form input,
+body.page-template-page-contato .fmbrzp-form select,
+body.page-template-page-contato .fmbrzp-form textarea{
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: var(--ast-global-color-5);
+  color: var(--fmbrzp-text);
+  font: inherit;
+}
+
+body.page-template-page-contato .fmbrzp-form textarea{
+  min-height: 110px;
+  resize: vertical;
+}
+
+body.page-template-page-contato .fmbrzp-form input:focus,
+body.page-template-page-contato .fmbrzp-form select:focus,
+body.page-template-page-contato .fmbrzp-form textarea:focus{
+  outline: 2px solid var(--ast-global-color-0);
+  outline-offset: 2px;
+}
+
+body.page-template-page-contato .fmbrzp-form-submit{
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: var(--fmbrzp-red);
+  color: var(--ast-global-color-5);
+  font-weight: 800;
+  cursor: pointer;
+  justify-self: start;
+}
+
+body.page-template-page-contato .fmbrzp-form-note{
+  margin-top: 8px;
+  color: var(--fmbrzp-muted);
+  font-size: .92rem;
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+  body.page-template-page-contato .fmbrzp-contato-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   CONTATO (do zero) â€” escopo total
+   ========================================================= */
+body.page-template-page-contato .fmbrzp-contato-page{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 14px 26px;
+}
+
+/* HERO padrÃ£o (mesmo â€œpadrÃ£oâ€ das outras pÃ¡ginas) */
+body.page-template-page-contato .fmbrzp-contato-hero{
+  border-radius: 12px;
+  border: 1px solid var(--fmbrzp-border);
+  overflow: hidden;
+  background-image: var(--fmbrzp-hero-bg);
+  background-size: cover;
+  background-position: center;
+  padding: 18px 18px 16px;
+  margin: 0 0 14px;
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__inner{
+  display: grid;
+  gap: 8px;
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__title{
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  color: var(--ast-global-color-0);
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__bar{
+  width: 56px;
+  height: 3px;
+  background: var(--ast-global-color-0);
+  border-radius: 999px;
+}
+
+body.page-template-page-contato .fmbrzp-cal-hero__sub{
+  margin: 0;
+  max-width: 720px;
+  color: var(--fmbrzp-muted);
+  font-size: 0.98rem;
+}
+
+/* GRID principal: compacto */
+body.page-template-page-contato .fmbrzp-contato-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+body.page-template-page-contato .fmbrzp-contato-panel{
+  background: var(--ast-global-color-5);
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+/* TÃ­tulos */
+body.page-template-page-contato .fmbrzp-section-title{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: var(--ast-global-color-0);
+  padding-left: 10px;
+  border-left: 3px solid var(--ast-global-color-0);
+}
+
+/* Lista de contatos (sem cards gigantes) */
+body.page-template-page-contato .fmbrzp-contact-list{
+  display: grid;
+  gap: 10px;
+}
+
+body.page-template-page-contato .fmbrzp-contact-item{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+
+  padding: 10px 10px;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  background: var(--fmbrzp-bg);
+}
+
+body.page-template-page-contato .fmbrzp-contact-meta{
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+body.page-template-page-contato .fmbrzp-contact-meta strong{
+  font-size: 0.95rem;
+  color: var(--fmbrzp-text);
+}
+
+body.page-template-page-contato .fmbrzp-contact-meta span{
+  font-size: 0.92rem;
+  color: var(--fmbrzp-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* BotÃµes */
+body.page-template-page-contato .fmbrzp-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: transform .15s ease, filter .15s ease, background-color .15s ease, color .15s ease;
+}
+
+body.page-template-page-contato .fmbrzp-btn--outline{
+  padding: 8px 12px;
+  border: 2px solid var(--fmbrzp-red);
+  color: var(--fmbrzp-red);
+  background: transparent;
+  font-size: .92rem;
+}
+
+body.page-template-page-contato .fmbrzp-btn--outline:hover{
+  background: var(--fmbrzp-red);
+  color: var(--ast-global-color-5);
+  transform: translateY(-1px);
+}
+
+body.page-template-page-contato .fmbrzp-btn--solid{
+  padding: 10px 14px;
+  border: 0;
+  background: var(--fmbrzp-red);
+  color: var(--ast-global-color-5);
+  font-size: .95rem;
+}
+
+body.page-template-page-contato .fmbrzp-btn--solid:hover{
+  filter: brightness(.95);
+  transform: translateY(-1px);
+}
+
+/* Alertas */
+body.page-template-page-contato .fmbrzp-contato-alert{
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--fmbrzp-border);
+  background: var(--fmbrzp-bg);
+  color: var(--fmbrzp-text);
+  font-size: .95rem;
+}
+
+body.page-template-page-contato .fmbrzp-contato-alert--ok{
+  border-color: rgba(0,0,0,.12);
+}
+
+body.page-template-page-contato .fmbrzp-contato-alert--err{
+  border-color: rgba(0,0,0,.16);
+}
+
+/* Form */
+body.page-template-page-contato .fmbrzp-form{
+  display: grid;
+  gap: 10px;
+}
+
+body.page-template-page-contato .fmbrzp-field{
+  display: grid;
+  gap: 6px;
+}
+
+body.page-template-page-contato .fmbrzp-field label{
+  font-weight: 700;
+  color: var(--fmbrzp-text);
+  font-size: .92rem;
+}
+
+body.page-template-page-contato .fmbrzp-field label span{
+  color: var(--fmbrzp-red);
+}
+
+body.page-template-page-contato .fmbrzp-form input,
+body.page-template-page-contato .fmbrzp-form select,
+body.page-template-page-contato .fmbrzp-form textarea{
+  width: 100%;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  padding: 9px 10px;
+  background: var(--ast-global-color-5);
+  color: var(--fmbrzp-text);
+  font: inherit;
+}
+
+body.page-template-page-contato .fmbrzp-form input:focus,
+body.page-template-page-contato .fmbrzp-form select:focus,
+body.page-template-page-contato .fmbrzp-form textarea:focus{
+  outline: 2px solid var(--ast-global-color-0);
+  outline-offset: 2px;
+}
+
+body.page-template-page-contato .fmbrzp-form-note{
+  margin: 2px 0 0;
+  color: var(--fmbrzp-muted);
+  font-size: .92rem;
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+  body.page-template-page-contato .fmbrzp-contato-grid{
+    grid-template-columns: 1fr;
+  }
+
+  body.page-template-page-contato .fmbrzp-contact-item{
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  body.page-template-page-contato .fmbrzp-btn{
+    justify-self: start;
+  }
+}
+
+/* Fallback para quando o body não tem page-template (slug contato) */
+body.page-contato .fmbrzp-contato-page{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 14px 26px;
+}
+
+body.page-contato .fmbrzp-cal-hero{
+  max-width: 1120px;
+  margin: 0 auto 14px;
+  border-radius: 12px;
+  border: 1px solid var(--fmbrzp-border);
+  background-image: var(--fmbrzp-hero-bg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 18px 16px;
+}
+
+body.page-contato .fmbrzp-cal-hero::before{
+  content:"";
+  display: block;
+  position:absolute;
+  inset:0;
+  background: var(--ast-global-color-5);
+  opacity:.88;
+}
+
+body.page-contato .fmbrzp-cal-hero__title{
+  color: var(--fmbrzp-red) !important;
+}
+
+body.page-contato .fmbrzp-section-title{
+  color: var(--fmbrzp-red) !important;
+}
+/* Contato - lista simples, sem ícones */
+body.page-template-page-contato .fmbrzp-contact-list{
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+body.page-template-page-contato .fmbrzp-contact-item{
+  padding: 10px 12px;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  background: var(--ast-global-color-5);
+}
+
+body.page-template-page-contato .fmbrzp-contact-item strong{
+  display: inline-block;
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--fmbrzp-red);
+  margin-right: 6px;
+}
+
+body.page-template-page-contato .fmbrzp-contact-item a{
+  color: var(--fmbrzp-text);
+  text-decoration: none;
+}
+
+body.page-template-page-contato .fmbrzp-contact-item a:hover{
+  color: var(--fmbrzp-red);
+  text-decoration: underline;
+}
+
+body.page-template-page-contato .fmbrzp-contact-action{
+  display: inline-block;
+  margin-top: 6px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--fmbrzp-red);
+  text-decoration: none;
+}
+
+body.page-template-page-contato .fmbrzp-contact-action:hover{
+  text-decoration: underline;
+}
+
+/* Contato – títulos em vermelho institucional */
+body.page-template-page-contato h1,
+body.page-template-page-contato h2 {
+    color: var(--fmbrzp-red);
+}
+
+/* Ajuste leve para não ficar pesado */
+body.page-template-page-contato h1 {
+    font-weight: 700;
+}
+
+body.page-template-page-contato h2 {
+    font-weight: 600;
+}
+
+/* Contato: títulos principais com maior especificidade (garante vermelho) */
+body.page-template-page-contato .fmbrzp-cal-hero__title,
+body.page-template-page-contato .fmbrzp-section-title {
+    color: var(--fmbrzp-red) !important;
+}
+
+/* Contato: fallback para body.page-contato (quando o template não é selecionado) */
+body.page-contato .fmbrzp-contato-page{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 14px 22px;
+}
+
+body.page-contato .fmbrzp-cal-hero{
+    max-width: 1120px;
+    margin: 0 auto 14px;
+    border-radius: 12px;
+    border: 1px solid var(--fmbrzp-border);
+    background-image: var(--fmbrzp-hero-bg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    padding: 18px 18px 16px;
+}
+
+body.page-contato .fmbrzp-cal-hero::before{
+    content:"";
+    display:block;
+    position:absolute;
+    inset:0;
+    background: var(--ast-global-color-5);
+    opacity:.88;
+}
+
+body.page-contato .fmbrzp-cal-hero__title,
+body.page-contato .fmbrzp-section-title{
+    color: var(--fmbrzp-red) !important;
+}
+
+/* =========================================================
+   CONTATO (override final - aplica via wrapper)
+   ========================================================= */
+.fmbrzp-contato-page{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 14px 26px;
+}
+
+.fmbrzp-contato-page .fmbrzp-cal-hero{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 12px;
+  background-image: var(--fmbrzp-hero-bg);
+  background-size: cover;
+  background-position: center;
+  padding: 18px 18px 16px;
+  margin: 0 0 14px;
+}
+
+.fmbrzp-contato-page .fmbrzp-cal-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ast-global-color-5);
+  opacity: 0.88;
+}
+
+.fmbrzp-contato-page .fmbrzp-cal-hero__inner{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+}
+
+.fmbrzp-contato-page .fmbrzp-cal-hero__title{
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  color: var(--fmbrzp-red) !important;
+}
+
+.fmbrzp-contato-page .fmbrzp-cal-hero__bar{
+  width: 56px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--fmbrzp-red);
+}
+
+.fmbrzp-contato-page .fmbrzp-cal-hero__sub{
+  margin: 0;
+  max-width: 720px;
+  color: var(--fmbrzp-muted);
+  font-size: .98rem;
+}
+
+.fmbrzp-contato-page .fmbrzp-contato-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.fmbrzp-contato-page .fmbrzp-contato-panel{
+  background: var(--ast-global-color-5);
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.fmbrzp-contato-page .fmbrzp-section-title{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: var(--fmbrzp-red) !important;
+  padding-left: 10px;
+  border-left: 3px solid var(--fmbrzp-red);
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-list{
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-item{
+  padding: 10px 12px;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  background: var(--ast-global-color-5);
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-item strong{
+  display: inline-block;
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--fmbrzp-red);
+  margin-right: 6px;
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-item a{
+  color: var(--fmbrzp-text);
+  text-decoration: none;
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-item a:hover{
+  color: var(--fmbrzp-red);
+  text-decoration: underline;
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-action{
+  display: inline-block;
+  margin-top: 6px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--fmbrzp-red);
+  text-decoration: none;
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-action:hover{
+  text-decoration: underline;
+}
+
+.fmbrzp-contato-page .fmbrzp-form{
+  display: grid;
+  gap: 10px;
+}
+
+.fmbrzp-contato-page .fmbrzp-field{
+  display: grid;
+  gap: 6px;
+}
+
+.fmbrzp-contato-page .fmbrzp-field label{
+  font-weight: 700;
+  color: var(--fmbrzp-text);
+  font-size: .92rem;
+}
+
+.fmbrzp-contato-page .fmbrzp-field label span{
+  color: var(--fmbrzp-red);
+}
+
+.fmbrzp-contato-page .fmbrzp-form input,
+.fmbrzp-contato-page .fmbrzp-form select,
+.fmbrzp-contato-page .fmbrzp-form textarea{
+  width: 100%;
+  border: 1px solid var(--fmbrzp-border);
+  border-radius: 10px;
+  padding: 9px 10px;
+  background: var(--ast-global-color-5);
+  color: var(--fmbrzp-text);
+  font: inherit;
+}
+
+.fmbrzp-contato-page .fmbrzp-form input:focus,
+.fmbrzp-contato-page .fmbrzp-form select:focus,
+.fmbrzp-contato-page .fmbrzp-form textarea:focus{
+  outline: 2px solid var(--ast-global-color-0);
+  outline-offset: 2px;
+}
+
+.fmbrzp-contato-page .fmbrzp-form-note{
+  margin: 2px 0 0;
+  color: var(--fmbrzp-muted);
+  font-size: .92rem;
+}
+
+@media (max-width: 900px){
+  .fmbrzp-contato-page .fmbrzp-contato-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   REFIMOS – FUNDO BRANCO + MENU PADRÃO (escopado por página)
+   Cole no FINAL do fmbrzp.css
+========================================================= */
+
+/* ---------- NOTÍCIAS: fundo branco + menu no tamanho padrão ---------- */
+body.page-template-page-noticias,
+body.page-template-page-noticias .site,
+body.page-template-page-noticias .site-content,
+body.page-template-page-noticias #primary,
+body.page-template-page-noticias .ast-container,
+body.page-template-page-noticias .entry-content {
+  background: #fff !important;
+}
+
+/* Se o "lilás" estiver em um wrapper/bloco específico da página */
+body.page-template-page-noticias .fmbrzp-page,
+body.page-template-page-noticias .fmbrzp-wrap,
+body.page-template-page-noticias .fmbrzp-hero,
+body.page-template-page-noticias .fmbrzp-section,
+body.page-template-page-noticias .fmbrzp-card {
+  background: #fff !important;
+}
+
+/* MENU maior só em /noticias/: força o padrão do site nessa página */
+body.page-template-page-noticias .main-header-menu > li > a,
+body.page-template-page-noticias .ast-header-menu > li > a,
+body.page-template-page-noticias .main-navigation a {
+  font-size: 16px !important;      /* ajuste fino: 15px se quiser mais compacto */
+  line-height: 1.2 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ---------- TRANSPARÊNCIA: lilás -> branco (inclusive dentro do bloco) ---------- */
+body.page-template-page-transparencia,
+body.page-template-page-transparencia .site,
+body.page-template-page-transparencia .site-content,
+body.page-template-page-transparencia #primary,
+body.page-template-page-transparencia .ast-container,
+body.page-template-page-transparencia .entry-content {
+  background: #fff !important;
+}
+
+/* blocos internos mais comuns */
+body.page-template-page-transparencia .fmbrzp-hero,
+body.page-template-page-transparencia .fmbrzp-section,
+body.page-template-page-transparencia .fmbrzp-card,
+body.page-template-page-transparencia .fmbrzp-grid,
+body.page-template-page-transparencia .fmbrzp-wrap {
+  background: #fff !important;
+}
+
+/* ---------- CONTATO: interior dos blocos lilás -> branco ---------- */
+body.page-template-page-contato,
+body.page-template-page-contato .site,
+body.page-template-page-contato .site-content,
+body.page-template-page-contato #primary,
+body.page-template-page-contato .ast-container,
+body.page-template-page-contato .entry-content {
+  background: #fff !important;
+}
+
+/* O que aparece "lilás" no print do Contato geralmente é o bloco/wrap e cards */
+body.page-template-page-contato .fmbrzp-cal-hero,
+body.page-template-page-contato .fmbrzp-contato-hero,
+body.page-template-page-contato .fmbrzp-contato-wrap,
+body.page-template-page-contato .fmbrzp-contato-grid,
+body.page-template-page-contato .fmbrzp-contato-col,
+body.page-template-page-contato .fmbrzp-contato-card,
+body.page-template-page-contato .fmbrzp-contato-item,
+body.page-template-page-contato .fmbrzp-contato-form {
+  background: #fff !important;
+}
+
+/* =========================================================
+   REFINO FINAL (Noticias/Transparencia/Contato) - fundo branco + menu padrão
+   ========================================================= */
+
+/* NOTICIAS (Posts page): usa body.blog/home */
+body.blog,
+body.home.blog,
+body.blog .site,
+body.home.blog .site,
+body.blog .site-content,
+body.home.blog .site-content,
+body.blog #primary,
+body.home.blog #primary,
+body.blog .ast-container,
+body.home.blog .ast-container,
+body.blog .entry-content,
+body.home.blog .entry-content,
+body.blog .fmbrzp-noticias-page,
+body.home.blog .fmbrzp-noticias-page {
+  background: #fff !important;
+}
+
+body.blog .fmbrzp-noticias-page .fmbrzp-card,
+body.home.blog .fmbrzp-noticias-page .fmbrzp-card,
+body.blog .fmbrzp-noticias-page .fmbrzp-cal-hero,
+body.home.blog .fmbrzp-noticias-page .fmbrzp-cal-hero {
+  background: #fff !important;
+}
+
+/* Menu de Noticias no mesmo tamanho do resto */
+body.blog .main-header-menu > li > a,
+body.home.blog .main-header-menu > li > a,
+body.blog .ast-header-menu > li > a,
+body.home.blog .ast-header-menu > li > a,
+body.blog .main-navigation a,
+body.home.blog .main-navigation a {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  padding-top: inherit !important;
+  padding-bottom: inherit !important;
+}
+
+/* TRANSPARENCIA: força branco no bloco interno */
+.fmbrzp-transparencia-page,
+.fmbrzp-transparencia-page .fmbrzp-hero,
+.fmbrzp-transparencia-page .fmbrzp-card,
+.fmbrzp-transparencia-page .fmbrzp-grid,
+.fmbrzp-transparencia-page .fmbrzp-wrap {
+  background: #fff !important;
+}
+
+/* CONTATO: força branco no interior dos blocos */
+.fmbrzp-contato-page,
+.fmbrzp-contato-page .fmbrzp-cal-hero,
+.fmbrzp-contato-page .fmbrzp-contato-hero,
+.fmbrzp-contato-page .fmbrzp-contato-wrap,
+.fmbrzp-contato-page .fmbrzp-contato-grid,
+.fmbrzp-contato-page .fmbrzp-contato-col,
+.fmbrzp-contato-page .fmbrzp-contato-card,
+.fmbrzp-contato-page .fmbrzp-contato-item,
+.fmbrzp-contato-page .fmbrzp-contato-form,
+.fmbrzp-contato-page .fmbrzp-contato-panel {
+  background: #fff !important;
+}
+
+/* =========================================================
+   CONTATO — ajustes finais (campos brancos + hero com imagem)
+   ========================================================= */
+.fmbrzp-contato-page .fmbrzp-cal-hero{
+  background-image: var(--fmbrzp-hero-bg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.fmbrzp-contato-page .fmbrzp-contact-item,
+.fmbrzp-contato-page .fmbrzp-contato-panel{
+  background: #fff !important;
+}
+
+.fmbrzp-contato-page .fmbrzp-form input,
+.fmbrzp-contato-page .fmbrzp-form select,
+.fmbrzp-contato-page .fmbrzp-form textarea{
+  background: #fff !important;
+}
+
+/* Contato: hero com fundo branco (overlay sólido) */
+.fmbrzp-contato-page .fmbrzp-cal-hero::before{
+  background: #fff !important;
+  opacity: 0.95 !important;
+}
+
+/* Noticias: menu igual ao padrao (mesmo padding do UI) */
+body.blog .main-header-menu .menu-link,
+body.home.blog .main-header-menu .menu-link,
+body.blog .main-navigation a,
+body.home.blog .main-navigation a,
+body.blog .ast-header-menu > li > a,
+body.home.blog .ast-header-menu > li > a {
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+}
+
+/* =========================================================
+   SISTEMA — padrão final (escopo: .fmbrzp-sistema-page)
+========================================================= */
+.fmbrzp-sistema-page{
+  background: #fff;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-wrap{
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 14px 28px;
+}
+
+/* HERO padrão (mesma estrutura do Calendário/Notícias) */
+.fmbrzp-sistema-page .fmbrzp-cal-hero{
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  padding: 22px 22px 18px;
+  margin: 0 0 14px;
+  background-image: var(--fmbrzp-cal-hero-bg);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1 / -1;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: #fff;
+  opacity: .9;
+  pointer-events:none;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero__title{
+  margin: 0 0 6px;
+  color: var(--fmbrzp-red);
+  font-size: 1.85rem;
+  line-height: 1.12;
+  padding-left: 12px;
+  border-left: 3px solid var(--fmbrzp-red);
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero__sub{
+  margin: 0;
+  color: var(--fmbrzp-muted);
+  line-height: 1.45;
+}
+
+/* Grid */
+.fmbrzp-sistema-page .fmbrzp-sistema-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+/* Cards */
+.fmbrzp-sistema-page .fmbrzp-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-card__title{
+  margin: 0 0 10px;
+  color: var(--fmbrzp-red);
+  font-size: 1.15rem;
+  padding-left: 12px;
+  border-left: 3px solid var(--fmbrzp-red);
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-card__text{
+  margin: 0 0 12px;
+  color: var(--fmbrzp-muted);
+  line-height: 1.45;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 10px;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-badge{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(176,0,0,.22);
+  background: rgba(176,0,0,.05);
+  color: var(--fmbrzp-red);
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-note{
+  margin-top: 6px;
+  color: var(--fmbrzp-muted);
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--fmbrzp-muted);
+  line-height: 1.5;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-list li{
+  margin: 6px 0;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-actions{
+  margin-top: 12px;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--fmbrzp-red);
+  color: var(--fmbrzp-red);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-link:hover{
+  background: var(--fmbrzp-red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Corrige empurrões de colunas */
+.fmbrzp-sistema-page .wp-block-columns{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.fmbrzp-sistema-page .wp-block-column{
+  flex-basis: auto;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 900px){
+  .fmbrzp-sistema-page .fmbrzp-sistema-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   SISTEMA — padrão via wrapper (sem depender de body class)
+   ========================================================= */
+.fmbrzp-sistema-page{
+  background: #fff;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-wrap{
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 14px 28px;
+}
+
+/* HERO padrão */
+.fmbrzp-sistema-page .fmbrzp-sistema-hero{
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  padding: 22px 22px 18px;
+  margin: 0 0 14px;
+  background-image: var(--fmbrzp-cal-hero-bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.fmbrzp-sistema-page .fmbrzp-hero__inner{
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.fmbrzp-sistema-page .fmbrzp-hero__title{
+  margin: 0 0 6px;
+  color: var(--fmbrzp-red);
+  font-size: 1.85rem;
+  line-height: 1.12;
+  padding-left: 12px;
+  border-left: 3px solid var(--fmbrzp-red);
+}
+
+.fmbrzp-sistema-page .fmbrzp-hero__desc{
+  margin: 0;
+  color: var(--fmbrzp-muted);
+  line-height: 1.45;
+}
+
+/* Grid */
+.fmbrzp-sistema-page .fmbrzp-sistema-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+/* Cards */
+.fmbrzp-sistema-page .fmbrzp-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-card__title{
+  margin: 0 0 10px;
+  color: var(--fmbrzp-red);
+  font-size: 1.15rem;
+  padding-left: 12px;
+  border-left: 3px solid var(--fmbrzp-red);
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-card__text{
+  margin: 0 0 12px;
+  color: var(--fmbrzp-muted);
+  line-height: 1.45;
+}
+
+/* Badges */
+.fmbrzp-sistema-page .fmbrzp-sistema-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 10px;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-badge{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(176,0,0,.22);
+  background: rgba(176,0,0,.05);
+  color: var(--fmbrzp-red);
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-note{
+  margin-top: 6px;
+  color: var(--fmbrzp-muted);
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+/* Lista */
+.fmbrzp-sistema-page .fmbrzp-sistema-list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--fmbrzp-muted);
+  line-height: 1.5;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-list li{
+  margin: 6px 0;
+}
+
+/* CTA */
+.fmbrzp-sistema-page .fmbrzp-sistema-actions{
+  margin-top: 12px;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--fmbrzp-red);
+  color: var(--fmbrzp-red);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.fmbrzp-sistema-page .fmbrzp-sistema-link:hover{
+  background: var(--fmbrzp-red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px){
+  .fmbrzp-sistema-page .fmbrzp-sistema-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === HERO SISTEMA – CORREÇÃO DE TEXTO === */
+body.page-template-page-sistema .fmbrzp-hero__title {
+    color: var(--fmbrzp-red) !important;
+}
+
+body.page-template-page-sistema .fmbrzp-hero__desc {
+    color: var(--ast-global-color-0) !important; /* preto padrão do site */
+}
+
+/* garante que o texto fique acima do overlay */
+body.page-template-page-sistema .fmbrzp-hero__inner {
+    position: relative;
+    z-index: 2;
+}
+
+body.page-template-page-sistema .fmbrzp-hero__title {
+    border-left: 4px solid var(--fmbrzp-red);
+    padding-left: 12px;
+}
+
+/* === SISTEMA: texto do HERO sempre em 1º plano (sem transparência) === */
+body.page-template-page-sistema .fmbrzp-hero,
+body.page-template-page-sistema .fmbrzp-hero * {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* overlay atrás do texto */
+body.page-template-page-sistema .fmbrzp-hero::before,
+body.page-template-page-sistema .fmbrzp-hero::after {
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+/* conteúdo do hero acima de tudo */
+body.page-template-page-sistema .fmbrzp-hero__inner,
+body.page-template-page-sistema .fmbrzp-hero__content {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* título e descrição travados */
+body.page-template-page-sistema .fmbrzp-hero__title {
+  color: var(--fmbrzp-red) !important;
+  opacity: 1 !important;
+}
+
+body.page-template-page-sistema .fmbrzp-hero__desc {
+  color: var(--ast-global-color-0) !important;
+  opacity: 1 !important;
+}
+
+/* =========================================================
+   SISTEMA — HERO: texto SEM transparência (corrige overlay/opacity no pai)
+   ========================================================= */
+
+/* garante que o hero é o stacking context correto */
+body.page-template-page-sistema .fmbrzp-sistema-hero,
+body.page-template-page-sistema .fmbrzp-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  opacity: 1 !important;     /* se alguém aplicou no pai, isso resolve */
+  filter: none !important;
+}
+
+/* se existir overlay por pseudo-elemento, ele fica ATRÁS */
+body.page-template-page-sistema .fmbrzp-sistema-hero::before,
+body.page-template-page-sistema .fmbrzp-sistema-hero::after,
+body.page-template-page-sistema .fmbrzp-hero::before,
+body.page-template-page-sistema .fmbrzp-hero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: 1 !important; /* overlay não “lava” o texto */
+  background: rgba(255,255,255,.78) !important; /* overlay branco usando RGBA (não opacity no pai) */
+}
+
+/* conteúdo sempre acima do overlay */
+body.page-template-page-sistema .fmbrzp-sistema-hero > *,
+body.page-template-page-sistema .fmbrzp-hero > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* títulos e descrição 100% legíveis */
+body.page-template-page-sistema .fmbrzp-sistema-hero h1,
+body.page-template-page-sistema .fmbrzp-hero h1 {
+  color: var(--fmbrzp-red) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+body.page-template-page-sistema .fmbrzp-sistema-hero p,
+body.page-template-page-sistema .fmbrzp-hero p {
+  color: #111 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Sistema: texto do hero sempre acima do overlay */
+.fmbrzp-sistema-page .fmbrzp-cal-hero{
+  position: relative;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero::before,
+.fmbrzp-sistema-page .fmbrzp-cal-hero::after{
+  z-index: 0 !important;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero__title,
+.fmbrzp-sistema-page .fmbrzp-cal-hero__sub{
+  position: relative;
+  z-index: 2 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Sistema: overlay cobre 100% (inclusive bordas) */
+.fmbrzp-sistema-page .fmbrzp-cal-hero::before,
+.fmbrzp-sistema-page .fmbrzp-cal-hero::after{
+  inset: -1px !important;
+  border-radius: inherit;
+}
+
+/* Sistema: mover imagem para pseudo-elemento e evitar bordas sem overlay */
+.fmbrzp-sistema-page .fmbrzp-cal-hero{
+  background-image: none !important;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit;
+  background-image: var(--fmbrzp-cal-hero-bg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  opacity: 0.25 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero::before{
+  background: #fff !important;
+  opacity: 0.9 !important;
+  z-index: 1 !important;
+}
+
+.fmbrzp-sistema-page .fmbrzp-cal-hero__title,
+.fmbrzp-sistema-page .fmbrzp-cal-hero__sub{
+  position: relative;
+  z-index: 2 !important;
+}
+
+/* Noticias: header full width branco + menu altura padrão */
+body.blog .site-header,
+body.home.blog .site-header,
+body.blog #masthead,
+body.home.blog #masthead,
+body.blog .main-header-bar,
+body.home.blog .main-header-bar,
+body.blog .main-header-container,
+body.home.blog .main-header-container{
+  background: #fff !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+body.blog .main-header-bar .ast-container,
+body.home.blog .main-header-bar .ast-container{
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+}
+
+body.blog .main-header-menu .menu-link,
+body.home.blog .main-header-menu .menu-link,
+body.blog .main-navigation a,
+body.home.blog .main-navigation a,
+body.blog .ast-header-menu > li > a,
+body.home.blog .ast-header-menu > li > a{
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Noticias: igualar fundo e altura do header ao padrão do site */
+body.blog .site-header,
+body.home.blog .site-header,
+body.blog #masthead,
+body.home.blog #masthead,
+body.blog .main-header-bar,
+body.home.blog .main-header-bar,
+body.blog .main-header-container,
+body.home.blog .main-header-container{
+  background: var(--fmbrzp-bg) !important;
+}
+
+body.blog .main-header-bar,
+body.home.blog .main-header-bar{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body.blog .main-header-bar .ast-container,
+body.home.blog .main-header-bar .ast-container{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body.blog .main-header-menu .menu-link,
+body.home.blog .main-header-menu .menu-link,
+body.blog .main-navigation a,
+body.home.blog .main-navigation a,
+body.blog .ast-header-menu > li > a,
+body.home.blog .ast-header-menu > li > a{
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Noticias: manter fundo do header com leve acinzentado padrão do site */
+body.blog .site-header,
+body.home.blog .site-header,
+body.blog #masthead,
+body.home.blog #masthead,
+body.blog .main-header-bar,
+body.home.blog .main-header-bar,
+body.blog .main-header-container,
+body.home.blog .main-header-container{
+  background: var(--ast-global-color-5) !important;
+}
+
+/* Noticias: header e laterais com o mesmo fundo #f7f8fa */
+body.blog,
+body.home.blog,
+body.blog .site,
+body.home.blog .site,
+body.blog .site-header,
+body.home.blog .site-header,
+body.blog #masthead,
+body.home.blog #masthead,
+body.blog .main-header-bar,
+body.home.blog .main-header-bar,
+body.blog .main-header-container,
+body.home.blog .main-header-container,
+body.blog .ast-container,
+body.home.blog .ast-container{
+  background: #f7f8fa !important;
+}
+
+/* Noticias: remover faixa clara dentro do container */
+body.blog .fmbrzp-noticias-page,
+body.home.blog .fmbrzp-noticias-page{
+  background: transparent !important;
+}
+
+body.blog .fmbrzp-news-list,
+body.home.blog .fmbrzp-news-list{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.blog .fmbrzp-container,
+body.home.blog .fmbrzp-container,
+body.blog .ast-container,
+body.home.blog .ast-container{
+  background: transparent !important;
+}
+
+body.blog .fmbrzp-news-grid,
+body.home.blog .fmbrzp-news-grid{
+  background: transparent !important;
+}
+
+/* Noticias: restaurar imagem de fundo do hero */
+body.blog .fmbrzp-noticias-page .fmbrzp-cal-hero,
+body.home.blog .fmbrzp-noticias-page .fmbrzp-cal-hero{
+  background-image: var(--fmbrzp-cal-hero-bg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-color: transparent !important;
+}
+
+/* Home: mais respiro entre “Acesso rápido” e os cards */
+.fmbrzp-quick .fmbrzp-section__header{
+  margin-bottom: 28px;
+}
+
+.fmbrzp-quick .fmbrzp-grid--quick{
+  margin-top: 6px;
+}
+
+/* Home: empurrar cards de Acesso rápido um pouco para a direita */
+.fmbrzp-quick .fmbrzp-grid--quick{
+  padding-left: 18px;
+}
+
+@media (max-width: 768px){
+  .fmbrzp-quick .fmbrzp-grid--quick{
+    padding-left: 0;
+  }
+}
+
+/* Header social icons */
+.fmbrzp-header-social{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 12px;
+}
+
+.fmbrzp-header-social__link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #222;
+  text-decoration: none;
+}
+
+.fmbrzp-header-social__link svg{
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.fmbrzp-header-social__link:hover{
+  color: #b30000;
+}
+
+/* Logo size bump */
+.fmbrzp-site-identity .fmbrzp-logo{
+  transform: scale(1.15);
+  transform-origin: left center;
+}
+
+@media (max-width: 1024px){
+  .fmbrzp-site-identity .fmbrzp-logo{
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px){
+  .fmbrzp-header-social{
+    display: none;
+  }
+  .fmbrzp-site-identity .fmbrzp-logo{
+    transform: scale(1.02);
+  }
+}
+
+/* Header social icons (menu item layout) */
+.fmbrzp-header-social-item{
+  display: flex;
+  align-items: center;
+}
+
+.fmbrzp-header-social-item .fmbrzp-header-social{
+  margin-left: 8px;
+}
+
+/* Header social icons (final) */
+.fmbrzp-header-social-item{
+  display: flex;
+  align-items: center;
+}
+
+.fmbrzp-header-social{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fmbrzp-header-social__link{
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+}
+
+.fmbrzp-header-social__link svg{
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.fmbrzp-header-social__link:hover{
+  color: #b30000;
+}
+
+@media (max-width: 768px){
+  .fmbrzp-header-social-item,
+  .fmbrzp-header-social{
+    display: none;
+  }
+}
+
+/* Header social icons (Astra menu fix) */
+#ast-hf-menu-1{
+  flex-wrap: nowrap;
+}
+
+#ast-hf-menu-1 .fmbrzp-header-social-item{
+  display: flex !important;
+  align-items: center !important;
+  margin-left: 12px !important;
+  padding-left: 12px !important;
+  border-left: 1px solid rgba(0,0,0,.08) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#ast-hf-menu-1 .fmbrzp-header-social{
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+#ast-hf-menu-1 .fmbrzp-header-social__link{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #1f2937 !important;
+}
+
+#ast-hf-menu-1 .fmbrzp-header-social__link svg{
+  width: 18px !important;
+  height: 18px !important;
+  fill: currentColor !important;
+}
+
+#ast-hf-menu-1 .fmbrzp-header-social__link:hover{
+  color: #b30000 !important;
+}
+
+@media (max-width: 921px){
+  #ast-hf-menu-1 .fmbrzp-header-social-item{
+    display: none !important;
+  }
+}
+
+/* Noticias: corrige quebra do menu com ícones */
+body.blog #ast-hf-menu-1,
+body.home.blog #ast-hf-menu-1{
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 0 !important;
+  white-space: nowrap !important;
+}
+
+body.blog #ast-hf-menu-1 > li,
+body.home.blog #ast-hf-menu-1 > li{
+  display: flex !important;
+  align-items: center !important;
+}
+
+body.blog #ast-hf-menu-1 .menu-link,
+body.home.blog #ast-hf-menu-1 .menu-link{
+  white-space: nowrap !important;
+}
+
+body.blog #ast-hf-menu-1 .fmbrzp-header-social-item,
+body.home.blog #ast-hf-menu-1 .fmbrzp-header-social-item{
+  margin-left: 8px !important;
+  padding-left: 8px !important;
+}
+
+/* Header social icons (Astra menu hardening) */
+body.blog .main-header-menu,
+body.home .main-header-menu,
+body.archive .main-header-menu,
+body.single-post .main-header-menu{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.main-header-menu .fmbrzp-header-social-item{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.main-header-menu .fmbrzp-header-social{
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.main-header-menu .fmbrzp-header-social__link{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #1f2937 !important;
+}
+
+.main-header-menu .fmbrzp-header-social__link svg{
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  fill: currentColor !important;
+}
+
+.main-header-menu .fmbrzp-header-social__link:hover{
+  color: #b30000 !important;
+}
+
+@media (max-width: 768px){
+  .main-header-menu .fmbrzp-header-social-item{
+    display: none !important;
+  }
+}
+
+/* ===== CORREÇÃO MENU BLOG / NOTÍCIAS ===== */
+body.blog #ast-hf-menu-1 > li.fmbrzp-header-social-item,
+body.home.blog #ast-hf-menu-1 > li.fmbrzp-header-social-item,
+body.archive #ast-hf-menu-1 > li.fmbrzp-header-social-item,
+body.single-post #ast-hf-menu-1 > li.fmbrzp-header-social-item {
+    display: flex !important;
+    align-items: center !important;
+    line-height: normal !important;
+}
+
+/* Garante que o container interno apareça */
+body.blog .fmbrzp-header-social,
+body.home.blog .fmbrzp-header-social,
+body.archive .fmbrzp-header-social,
+body.single-post .fmbrzp-header-social {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px;
+}
+
+/* Remove qualquer colapso de altura */
+body.blog .fmbrzp-header-social__link,
+body.home.blog .fmbrzp-header-social__link {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ícones visíveis e padronizados */
+.fmbrzp-header-social__link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Ajuste fino de espaçamento no blog */
+body.blog .fmbrzp-header-social-item {
+    margin-left: 8px !important;
+    padding-left: 12px !important;
+    border-left: 1px solid rgba(0,0,0,.08);
+}
+
+/* Noticias: afastar menu da logo e garantir ícones visíveis */
+body.blog #masthead .main-header-bar .ast-container,
+body.home.blog #masthead .main-header-bar .ast-container,
+body.archive #masthead .main-header-bar .ast-container,
+body.single-post #masthead .main-header-bar .ast-container{
+  column-gap: 24px !important;
+}
+
+body.blog #masthead .main-header-bar .site-branding,
+body.home.blog #masthead .main-header-bar .site-branding,
+body.archive #masthead .main-header-bar .site-branding,
+body.single-post #masthead .main-header-bar .site-branding{
+  margin-right: 18px !important;
+}
+
+body.blog #ast-hf-menu-1 .fmbrzp-header-social__link,
+body.home.blog #ast-hf-menu-1 .fmbrzp-header-social__link,
+body.archive #ast-hf-menu-1 .fmbrzp-header-social__link,
+body.single-post #ast-hf-menu-1 .fmbrzp-header-social__link{
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #1f2937 !important;
+}
+
+body.blog #ast-hf-menu-1 .fmbrzp-header-social__link svg,
+body.home.blog #ast-hf-menu-1 .fmbrzp-header-social__link svg,
+body.archive #ast-hf-menu-1 .fmbrzp-header-social__link svg,
+body.single-post #ast-hf-menu-1 .fmbrzp-header-social__link svg{
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  fill: currentColor !important;
+}
